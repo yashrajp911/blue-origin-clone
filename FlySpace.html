@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly To Space</title>
+<style>
+    .bg-img {
+  background-image: url(https://d3ezn0y6hdgq62.cloudfront.net/assets/newshepard-interior-view.jpg);
+  min-height: 380px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 800px;
+  width: 1500px;
+  position: relative;
+}
+.container{
+  float:left;
+  margin: 20px;
+  width: auto;
+}
+.topnav{
+  overflow: hidden;
+  background-color: none;
+}
+h1{
+    position: absolute;
+    bottom: 300px;
+    left:450px;
+    color: white;
+    font-family: fantasy;
+    font-size: 90px;
+}
+.text{
+    position: absolute;
+    bottom: 330px;
+    left: 540px;
+    color: white;
+    font-family: Barlow,sans-serif;
+    font-size: 20px;
+}
+.container-fluid{
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    height: 60px;
+    width: 1600px;
+}
+.social-img{
+    position: absolute;
+    bottom: -700px;
+    height: 20px;
+    transition: -webkit-transform .2s cubic-bezier(.4,0,.2,1);
+    transition: transform .2s cubic-bezier(.4,0,.2,1);
+    transition: transform .2s cubic-bezier(.4,0,.2,1),-webkit-transform .2s cubic-bezier(.4,0,.2,1);
+    width: 20px;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+    float: right;
+    align-items: center;
+}
+.footer-wrapper {
+    background-color: #222;
+    position:absolute;
+    width: 1600px;
+    height: 700px;
+}
+.footer-wrapper .logo-container .logo {
+    display: block;
+    margin-bottom: 60px;
+    max-width: 220px;
+    width: 100%;
+    padding-top: 100px;
+    
+}
+.text-decoration-none {
+    text-decoration: none!important;
+    float: left;
+    padding: 20px;
+}
+.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+}
+.footer-wrapper .links-list-cont a, .footer-wrapper .links-list-cont button, .footer-wrapper .links-list-cont label {
+    color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .10938rem;
+    line-height: 1.1875rem;
+    position:absolute;
+    left: 500px;
+    bottom: 100px;
+    padding: 20px;
+    padding-bottom: 20px;
+}   
+</style>
+</head>
+<body>
+    <div class="bg-img">
+    <div class="container">
+        <div class="topnav">
+            <a><img src="https://d3ezn0y6hdgq62.cloudfront.net/components/header/blueorigin_logo_tagline.svg" height="60px" width="264px" style="float: left;"></a>
+        </div>
+    </div>
+    </div>
+    <h1 >BOOK YOUR FLIGHT</h1>
+    <div class="text">
+        Purchase a window seat on a life-changing spaceflight
+    </div>
+    <div class="col-12 col-md-10 col-lg-8">
+        <noscript>
+            <style>
+                #form {
+                    display: none;
+                }
+            </style>
+    </noscript>
+        <form method="post" id="form" action="registrationjsp.jsp">
+
+            <div class="header-txt-cont mb-4">
+                
+            </div>
+
+            <div :class="success ? 'submitted' : ''" class="">
+                <div class="row">
+                    <div class="col-12" style="background-color: black;">
+                        <h2 class="h3" style="color: white; text-align: center; font-size: 50px; font-family: sans-serif;">RESERVE YOUR SEAT ON NEW SHEPARD</h2>
+                        <fieldset class="mb-5" style="color: white; text-align: center; padding: 10px; font-size: 30px;">
+                            <div class="mb-4">
+                                <p>* indicates a required field</p>
+                            </div>
+                            <div class="row mb-4" style="color: white;">
+                                <div class="col">
+                                    <label for="firstname" class="form-label">First Name<abbr class="req" title="required">*</abbr></label>
+                                    <input type="text" class="form-control" id="firstname" name="firstname" x-bind:class="{'invalid':errorMessages.firstname}" data-rules="[&quot;required&quot;]" required="" maxlength="40" autocomplete="given-name" aria-describedby="firstname__error">
+                                    <p class="error-message" x-show="errorMessages.firstname" x-text="errorMessages.firstname" x-transition:enter="" id="firstname__error" style="display: none;"></p>
+                                </div>
+                                <div class="col" style="padding: 20px;">
+                                    <label for="lastname" class="form-label" name="lastname">Last Name<abbr class="req" title="required">*</abbr></label>
+                                    <input type="text" class="form-control" id="lastname" name="lastname" x-bind:class="{'invalid':errorMessages.lastname}" data-rules="[&quot;required&quot;]" required="" maxlength="80" autocomplete="family-name" aria-describedby="lastname__error">
+                                    <p class="error-message" x-show="errorMessages.lastname" x-text="errorMessages.lastname" x-transition:enter="" id="lastname__error" style="display: none;"></p>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="form-label">Email<abbr class="req" title="required">*</abbr></label>
+                                <input type="email" class="form-control" id="email" name="email" x-bind:class="{'invalid':errorMessages.email}" data-rules="[&quot;required&quot;, &quot;email&quot;]" required="" maxlength="80" autocomplete="email" aria-describedby="email__error">
+                                <p class="error-message" x-show="errorMessages.email" x-text="errorMessages.email" x-transition:enter="" id="email__error" style="display: none;"></p>
+                            </div>
+                            <div class="mb-4" style="padding: 20px;">
+                                <label for="phonenumber" class="form-label">Phone Number<abbr class="req" title="required">*</abbr></label>
+                                <input type="tel" class="form-control" id="phonenumber" name="phonenumber" x-bind:class="{'invalid':errorMessages.phonenumber}" data-rules="[&quot;required&quot;]" required="" maxlength="40" autocomplete="tel" aria-describedby="phonenumber__error">
+<p class="error-message" x-show="errorMessages.phonenumber" x-text="errorMessages.phonenumber" x-transition:enter="" id="phonenumber__error" style="display: none;"></p>
+</div>
+
+
+    <div class="mb-4" style="padding: 20px;">
+        <label for="address_one" class="form-label">Address 1<abbr class="req" title="required"> *</abbr></label>
+        <input type="text" class="form-control" id="address_one" name="address_one" x-bind:class="{'invalid':errorMessages.address_one}" data-rules="[&quot;required&quot;]" required="" maxlength="125" autocomplete="address-line1" aria-describedby="address_one__error">
+        <p class="error-message" x-show="errorMessages.address_one" x-text="errorMessages.address_one" x-transition:enter="" id="address_one__error" style="display: none;"></p>
+    </div>
+
+    <div class="mb-4"style="padding: 20px;">
+        <label for="address_two" class="form-label">Address 2</label>
+        <input type="text" class="form-control" id="address_two" name="address_two" maxlength="125" autocomplete="address-line2">
+    </div>
+
+    <div class="row mb-4" style="padding: 20px;">
+        <div class="col"style="padding: 20px;">
+            <label for="city" class="form-label">City<abbr class="req" title="required"> *</abbr></label>
+            <input type="text" class="form-control" id="city" name="city" x-bind:class="{'invalid':errorMessages.city}" data-rules="[&quot;required&quot;]" required="" maxlength="40" autocomplete="address-level2" aria-describedby="city__error">
+            <p class="error-message" x-show="errorMessages.city" x-text="errorMessages.city" x-transition:enter="" id="city__error" style="display: none;"></p>
+        </div>
+        <div class="col" style="padding: 20px;">
+            <label for="state" class="form-label">State/province</label>
+            <input type="text" class="form-control" id="state" name="state" maxlength="80" autocomplete="address-level1">
+        </div>
+    </div>
+    <div class="row mb-4" style="padding: 20px;">
+        <div class="col" style="padding: 20px;">
+            <label for="zip" class="form-label">Zip/postal code</label>
+            <input type="text" class="form-control" id="zip" name="zip" maxlength="20" autocomplete="postal-code">
+        </div>
+        <div class="col"style="padding: 20px;">
+            <label for="country" class="form-label">Country<abbr class="req" title="required"> *</abbr></label>
+            <div class="select-wrap">
+                <select id="country" name="country" class="form-select" x-bind:class="{'invalid':errorMessages.country}" data-rules="[&quot;required&quot;]" required="" autocomplete="country-name" aria-describedby="country__error">
+                    <option value="">Select an Option</option>
+                    <option value="Afghanistan">Afghanistan</option> <option value="Albania">Albania</option> <option value="Algeria">Algeria</option> <option value="American Samoa">American Samoa</option> <option value="Andorra">Andorra</option> <option value="Angola">Angola</option> <option value="Anguilla">Anguilla</option> <option value="Antigua &amp; Barbuda">Antigua &amp; Barbuda</option> <option value="Argentina">Argentina</option> <option value="Armenia">Armenia</option> <option value="Aruba">Aruba</option> <option value="Australia">Australia</option> <option value="Austria">Austria</option> <option value="Azerbaijan">Azerbaijan</option> <option value="Bahamas">Bahamas</option> <option value="Bahrain">Bahrain</option> <option value="Bangladesh">Bangladesh</option> <option value="Barbados">Barbados</option> <option value="Belarus">Belarus</option> <option value="Belgium">Belgium</option> <option value="Belize">Belize</option> <option value="Benin">Benin</option> <option value="Bermuda">Bermuda</option> <option value="Bhutan">Bhutan</option> <option value="Bolivia">Bolivia</option> <option value="Bonaire">Bonaire</option> <option value="Bosnia &amp; Herzegovina">Bosnia &amp; Herzegovina</option> <option value="Botswana">Botswana</option> <option value="Brazil">Brazil</option> <option value="British Indian Ocean Ter">British Indian Ocean Ter</option> <option value="Brunei">Brunei</option> <option value="Bulgaria">Bulgaria</option> <option value="Burkina Faso">Burkina Faso</option> <option value="Burundi">Burundi</option> <option value="Cambodia">Cambodia</option> <option value="Cameroon">Cameroon</option> <option value="Canada">Canada</option> <option value="Canary Islands">Canary Islands</option> <option value="Cape Verde">Cape Verde</option> <option value="Cayman Islands">Cayman Islands</option> <option value="Central African Republic">Central African Republic</option> <option value="Chad">Chad</option> <option value="Channel Islands">Channel Islands</option> <option value="Chile">Chile</option> <option value="China">China</option> <option value="Christmas Island">Christmas Island</option> <option value="Cocos Island">Cocos Island</option> <option value="Colombia">Colombia</option> <option value="Comoros">Comoros</option> <option value="Congo">Congo</option> <option value="Cook Islands">Cook Islands</option> <option value="Costa Rica">Costa Rica</option> <option value="Cote DIvoire">Cote DIvoire</option> <option value="Croatia">Croatia</option> <option value="Cuba">Cuba</option> <option value="Curacao">Curacao</option> <option value="Cyprus">Cyprus</option> <option value="Czech Republic">Czech Republic</option> <option value="Denmark">Denmark</option> <option value="Djibouti">Djibouti</option> <option value="Dominica">Dominica</option> <option value="Dominican Republic">Dominican Republic</option> <option value="East Timor">East Timor</option> <option value="Ecuador">Ecuador</option> <option value="Egypt">Egypt</option> <option value="El Salvador">El Salvador</option> <option value="Equatorial Guinea">Equatorial Guinea</option> <option value="Eritrea">Eritrea</option> <option value="Estonia">Estonia</option> <option value="Ethiopia">Ethiopia</option> <option value="Falkland Islands">Falkland Islands</option> <option value="Faroe Islands">Faroe Islands</option> <option value="Fiji">Fiji</option> <option value="Finland">Finland</option> <option value="France">France</option> <option value="French Guiana">French Guiana</option> <option value="French Polynesia">French Polynesia</option> <option value="French Southern Ter">French Southern Ter</option> <option value="Gabon">Gabon</option> <option value="Gambia">Gambia</option> <option value="Georgia">Georgia</option> <option value="Germany">Germany</option> <option value="Ghana">Ghana</option> <option value="Gibraltar">Gibraltar</option> <option value="Great Britain">Great Britain</option> <option value="Greece">Greece</option> <option value="Greenland">Greenland</option> <option value="Grenada">Grenada</option> <option value="Guadeloupe">Guadeloupe</option> <option value="Guam">Guam</option> <option value="Guatemala">Guatemala</option> <option value="Guinea">Guinea</option> <option value="Guyana">Guyana</option> <option value="Haiti">Haiti</option> <option value="Hawaii">Hawaii</option> <option value="Honduras">Honduras</option> <option value="Hong Kong">Hong Kong</option> <option value="Hungary">Hungary</option> <option value="Iceland">Iceland</option> <option value="Indonesia">Indonesia</option> <option value="India">India</option> <option value="Iran">Iran</option> <option value="Iraq">Iraq</option> <option value="Ireland">Ireland</option> <option value="Isle of Man">Isle of Man</option> <option value="Israel">Israel</option> <option value="Italy">Italy</option> <option value="Jamaica">Jamaica</option> <option value="Japan">Japan</option> <option value="Jordan">Jordan</option> <option value="Kazakhstan">Kazakhstan</option> <option value="Kenya">Kenya</option> <option value="Kiribati">Kiribati</option> <option value="Korea North">Korea North</option> <option value="Korea Sout">Korea South</option> <option value="Kuwait">Kuwait</option> <option value="Kyrgyzstan">Kyrgyzstan</option> <option value="Laos">Laos</option> <option value="Latvia">Latvia</option> <option value="Lebanon">Lebanon</option> <option value="Lesotho">Lesotho</option> <option value="Liberia">Liberia</option> <option value="Libya">Libya</option> <option value="Liechtenstein">Liechtenstein</option> <option value="Lithuania">Lithuania</option> <option value="Luxembourg">Luxembourg</option> <option value="Macau">Macau</option> <option value="Macedonia">Macedonia</option> <option value="Madagascar">Madagascar</option> <option value="Malaysia">Malaysia</option> <option value="Malawi">Malawi</option> <option value="Maldives">Maldives</option> <option value="Mali">Mali</option> <option value="Malta">Malta</option> <option value="Marshall Islands">Marshall Islands</option> <option value="Martinique">Martinique</option> <option value="Mauritania">Mauritania</option> <option value="Mauritius">Mauritius</option> <option value="Mayotte">Mayotte</option> <option value="Mexico">Mexico</option> <option value="Midway Islands">Midway Islands</option> <option value="Moldova">Moldova</option> <option value="Monaco">Monaco</option> <option value="Mongolia">Mongolia</option> <option value="Montserrat">Montserrat</option> <option value="Morocco">Morocco</option> <option value="Mozambique">Mozambique</option> <option value="Myanmar">Myanmar</option> <option value="Nambia">Nambia</option> <option value="Nauru">Nauru</option> <option value="Nepal">Nepal</option> <option value="Netherland Antilles">Netherland Antilles</option> <option value="Netherlands">Netherlands (Holland, Europe)</option> <option value="Nevis">Nevis</option> <option value="New Caledonia">New Caledonia</option> <option value="New Zealand">New Zealand</option> <option value="Nicaragua">Nicaragua</option> <option value="Niger">Niger</option> <option value="Nigeria">Nigeria</option> <option value="Niue">Niue</option> <option value="Norfolk Island">Norfolk Island</option> <option value="Norway">Norway</option> <option value="Oman">Oman</option> <option value="Pakistan">Pakistan</option> <option value="Palau Island">Palau Island</option> <option value="Palestine">Palestine</option> <option value="Panama">Panama</option> <option value="Papua New Guinea">Papua New Guinea</option> <option value="Paraguay">Paraguay</option> <option value="Peru">Peru</option> <option value="Philippines">Philippines</option> <option value="Pitcairn Island">Pitcairn Island</option> <option value="Poland">Poland</option> <option value="Portugal">Portugal</option> <option value="Puerto Rico">Puerto Rico</option> <option value="Qatar">Qatar</option> <option value="Republic of Montenegro">Republic of Montenegro</option> <option value="Republic of Serbia">Republic of Serbia</option> <option value="Reunion">Reunion</option> <option value="Romania">Romania</option> <option value="Russia">Russia</option> <option value="Rwanda">Rwanda</option> <option value="St Barthelemy">St Barthelemy</option> <option value="St Eustatius">St Eustatius</option> <option value="St Helena">St Helena</option> <option value="St Kitts-Nevis">St Kitts-Nevis</option> <option value="St Lucia">St Lucia</option> <option value="St Maarten">St Maarten</option> <option value="St Pierre &amp; Miquelon">St Pierre &amp; Miquelon</option> <option value="St Vincent &amp; Grenadines">St Vincent &amp; Grenadines</option> <option value="Saipan">Saipan</option> <option value="Samoa">Samoa</option> <option value="Samoa American">Samoa American</option> <option value="San Marino">San Marino</option> <option value="Sao Tome &amp; Principe">Sao Tome &amp; Principe</option> <option value="Saudi Arabia">Saudi Arabia</option> <option value="Senegal">Senegal</option> <option value="Seychelles">Seychelles</option> <option value="Sierra Leone">Sierra Leone</option> <option value="Singapore">Singapore</option> <option value="Slovakia">Slovakia</option> <option value="Slovenia">Slovenia</option> <option value="Solomon Islands">Solomon Islands</option> <option value="Somalia">Somalia</option> <option value="South Africa">South Africa</option> <option value="Spain">Spain</option> <option value="Sri Lanka">Sri Lanka</option> <option value="Sudan">Sudan</option> <option value="Suriname">Suriname</option> <option value="Swaziland">Swaziland</option> <option value="Sweden">Sweden</option> <option value="Switzerland">Switzerland</option> <option value="Syria">Syria</option> <option value="Tahiti">Tahiti</option> <option value="Taiwan">Taiwan</option> <option value="Tajikistan">Tajikistan</option> <option value="Tanzania">Tanzania</option> <option value="Thailand">Thailand</option> <option value="Togo">Togo</option> <option value="Tokelau">Tokelau</option> <option value="Tonga">Tonga</option> <option value="Trinidad &amp; Tobago">Trinidad &amp; Tobago</option> <option value="Tunisia">Tunisia</option> <option value="Turkey">Turkey</option> <option value="Turkmenistan">Turkmenistan</option> <option value="Turks &amp; Caicos Is">Turks &amp; Caicos Is</option> <option value="Tuvalu">Tuvalu</option> <option value="Uganda">Uganda</option> <option value="United Kingdom">United Kingdom</option> <option value="Ukraine">Ukraine</option> <option value="United Arab Emirates">United Arab Emirates</option> <option value="United States of America">United States of America</option> <option value="Uruguay">Uruguay</option> <option value="Uzbekistan">Uzbekistan</option> <option value="Vanuatu">Vanuatu</option> <option value="Vatican City State">Vatican City State</option> <option value="Venezuela">Venezuela</option> <option value="Vietnam">Vietnam</option> <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option> <option value="Virgin Islands (USA)">Virgin Islands (USA)</option> <option value="Wake Island">Wake Island</option> <option value="Wallis &amp; Futana Is">Wallis &amp; Futana Is</option> <option value="Yemen">Yemen</option> <option value="Zaire">Zaire</option> <option value="Zambia">Zambia</option> <option value="Zimbabwe">Zimbabwe</option>
+                </select>
+                <p class="error-message" x-show="errorMessages.country" x-text="errorMessages.country" x-transition:enter="" id="country__error" style="display: none;"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-4"style="padding: 20px;">
+        <label for="dob" class="form-label">Date of birth<abbr class="req" title="required"> *</abbr></label>
+        <input type="date" class="form-control" id="dob" name="dob" x-bind:class="{'invalid':errorMessages.dob}" data-rules="[&quot;required&quot;]" required="" autocomplete="bday" aria-describedby="dob__error">
+        <p class="error-message" x-show="errorMessages.dob" x-text="errorMessages.dob" x-transition:enter="" id="dob__error" style="display: none;"></p>
+    </div>
+</fieldset>
+
+<h2 class="h3" style="color:white; text-align: center;">Help Us Find The Right Flight For You</h2>
+
+<fieldset>
+    <div class="mb-4"  style="color:white; text-align: center; font-size: 20px; padding: 10px;">
+        <label for="when">When are you interested in flying?</label>
+        <select type="select" id="when" name="when" class="form-select">
+            <option value="2022" selected="selected">2022</option>
+            <option value="2023-2024">2023-2024</option>
+            <option value="2025 onward">2025 onward</option>
+        </select>
+    </div>
+
+    <div class="mb-5"  style="color:white; text-align: center; font-size: 20px; padding: 10px;">
+        <label for="numberofseats">How many seats would you like to purchase together?</label>
+        <select type="select" class="form-select" id="numberofseats" name="numberofseats">
+            <option value="1" selected="selected">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="Full Capsule">Full Capsule</option>
+        </select>
+        <p>There are 6 seats in the New Shepard crew capsule.</p>
+    </div>
+
+    <div class="disclaimer-wrapper"  style="color:white; text-align: center; font-size: 20px; padding: 10px;">
+<label for="updates" class="form-checkbox__label">
+<input type="checkbox" id="updates" name="updates" class="form-checkbox form-checkbox--large" :class="{'form-checkbox--invalid':errorMessages.updates}" data-rules="[&quot;checked&quot;]" required="" aria-describedby="updates__error">
+<div class="disclaimer-copy"><p><em>Please click to confirm your consent to our <a href="/privacy-policy">Privacy Policy</a>.</em></p><p><em>Note - you have the right to withdraw your consent at any time by contacting us at <a href="mailto:privacy@blueorigin.com">privacy@blueorigin.com</a>.</em></p><p><em>Please review our <a href="/privacy-policy">privacy policy</a> for more information on how we process your data.</em></p><p><em>Filling out this form does not guarantee you a seat on a future New Shepard flight.</em></p></div>
+</label>
+<p class="error-message" x-show="errorMessages.updates" x-text="errorMessages.updates" x-transition:enter="" id="updates__error" style="display: none;"></p>
+</div>
+
+    <div class="text-center mt-5" style="position: absolute; left: 690px; bottom: -1425px;">
+    <button style="" onclick="registrationjsp.jsp" type="submit" class="btn btn-animation btn-blue" x-bind:aria-disabled="submitting ? 'true' : 'false'" aria-disabled="false">
+<i class="spinner-border spinner-border-sm me-1" x-show="submitting" style="display: none;"></i>
+<span x-show="!submitting">Submit</span>
+<span x-show="submitting" style="display: none;">Submitting...</span>
+</button>
+
+    </div>
+</fieldset>
+</div>
+</div>
+
+            </div>
+            <div class="form-success text-center" x-show="success" x-transition="" style="display: none;">
+                
+                    <h2>Thank you for your submission.</h2>
+                    <p>Our sales staff will review your information and reach out to you via email with next steps. - Gradatim Ferociter</p>
+                
+            </div>
+
+            <div class="form-error text-center mt-4" x-show="error" x-transition="" style="display: none;">
+                
+                    <h2 class="text-center">Sorry, that didn't work.</h2>
+                
+            </div>
+        </form>
+    </div>
+    <div class="footer-wrapper">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-12 col-lg-4 logo-container footer-line-adjust position-relative d-flex flex-column justify-content-center align-items-center" style="position: absolute; left:100px;">
+                    <div class="footer-box">
+                        
+                            <a class="lh-sm logo" href="/">
+                                <img class="logo" src="https://d3ezn0y6hdgq62.cloudfront.net/icons/featherfooter.svg" alt="Blue Origin Home">
+                            </a>
+                        
+                        <div class="legal-links-responsive-hor d-flex flex-column d-none d-lg-flex">
+                            <p class="copyright-size-hor text-start text-uppercase" style="position: absolute;left: 10px; color: white;"> © 2007 - 2023 Blue Origin, All Rights Reserved. </p>
+                            <ul class="privacy_terms_cont-hor ps-0">
+                                
+                                    <li>
+                                        <a class="text-decoration-none" href="/privacy-policy" style="position: absolute; bottom: -150px; left: 0px; color: white;"> Privacy Policy</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="text-decoration-none" href="/terms-of-use" style="position: absolute; bottom: -150px; left: 200px; color: white; width:max-content;"> Terms Of Use </a>
+                                    </li>
+                                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex  flex-column justify-content-center align-items-center text-center text-lg-start">
+                        <div class="footer-box">
+                            <ul class="links-list-cont list-unstyled">
+                                
+                                    <li>
+                                        <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="/careers" style="position: absolute; bottom: 550px; left: 550px;">Careers</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="/news/gallery"style="position: absolute; bottom: 500px; left: 550px;">Gallery</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="/new-shepard/fly" style="position: absolute; bottom: 450px; left: 550px;">Become an Astronaut</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="/become-a-supplier"style="position: absolute; bottom: 400px; left: 550px;">Become a Supplier</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="/news/media-inquiries"style="position: absolute; bottom: 350px; left: 550px;">Media Inquiries</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="/accessibility"style="position: absolute; bottom: 300px; left: 550px;">Accessibility</a>
+                                    </li>
+                                
+                                <li>
+                                     <div class="mb-4" style="position: absolute; bottom: 120px; width: max-content; left: 0px;">
+                                        <label class="form-label" for="accessibility-font" style="width: max-content;
+                                        left: 550px;
+                                        bottom: 130px;">
+                                            Accessible Font Styles
+                                        </label>
+                                        <div class="links-list-cont__select-wrap" style="position: absolute; left: 570px; bottom: 90px;">
+                                            <select id="accessibility-font" class="form-select links-list-cont_select-wrap_select" type="select" name="accessibility-font">
+                                              <option class="links-list-cont_select-wrapselect_option" value="none">Default</option>
+                                              <option class="links-list-cont_select-wrapselect_option" value="atkinson-hyperlegible">Atkinson Hyperlegible</option>
+                                              <option class="links-list-cont_select-wrapselect_option" value="open-dyslexic">Open Dyslexic</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+                                    <li>
+                                    </li>
+                                    <li>
+                                        <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="/cookie-settings"style="position: absolute; bottom: 130px; left: 550px;">Cookie Settings</a>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex flex-column grey-for-form">
+                        <div class="footer-box" style="position: absolute;left: 900px; background-color: #2a2a2a; height: 685px; width: 600px; bottom: 15px;">
+                            <h2 class="subscribe-header" style="position: absolute; bottom: 560px; left: 50px; color: white;">Subscribe</h2>
+                            <p class="email-top-text mb-4 fw-normal lh-sm" style="position: absolute; bottom: 470px; left: 50px; font-size: 18px; width: 300px;color: white;"> Sign up to receive updates on Blue Origin's announcements, launches, and opportunities. </p>
+                            <div class="d-flex" style="position: absolute; bottom: 160px; left: 50px;width: 300px;font-size: 17px;color: white;">
+                                <form action="connect.jsp" method="post" name="mc-embedded-subscribe-form" target="_blank" class="align-items-center" x-data="{submitting:false}">
+                                <div class="mb-4">
+                                    <p>* indicates a required field</p>
+                                </div>
+                                    <div class="col-12">
+                                        <label class="fw-bold lh-sm" for="EMAIL">Email<abbr class="req" title="required"> *</abbr></label>
+                                        <div class="input-group mb-3">
+                                            <input type="email" name="EMAIL" autocomplete="email" class="form-control subscribe-input-vars bg-transparent subscribe-border rounded-0 p-0 pb-2" id="EMAIL" required="">
+                                        </div>
+                                    </div>
+
+                                    <label class="form-checkbox__label font-color-light-grey">
+                                        <input type="checkbox" class="form-checkbox" required="">
+                                        <div>
+                                            <em>Please click to confirm your consent to receive email updates from us. Note - you have the right to withdraw your consent at any time by contacting us at <a href="mailto:privacy@blueorigin.com">privacy@blueorigin.com</a>
+                                                 or by clicking the “unsubscribe” link in the emails we send to you. Please review our <a href="https://www.blueorigin.com/privacy-policy">privacy policy</a> for more information on how we process your data.</em>
+                                        </div>
+                                    </label>
+
+                                    <button type="submit" class="btn btn-minimal btn-animation empty-grey-grey mt-3">
+                                        <span>Submit</span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

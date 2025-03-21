@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engine</title>
+</head>
+<style>     .bg-img {
+    background-image: url(https://d3ezn0y6hdgq62.cloudfront.net/assets/blueorigin_be4_test_headerdark.jpg);
+    min-height: 380px;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 800px;
+    width: 1500px;
+    position: relative;
+  }
+  .container {
+    float: right;
+    margin: 0px;
+    width: auto;
+    padding-top: 10px;
+  }
+  .container1{
+    float:left;
+    margin: 0px;
+    width: auto;
+    padding-top: 10px;
+    
+    color: white;
+  }
+  .topnav1{
+      overflow: hidden;
+      background-color: transparent;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: none;
+  }
+  .topnav a {
+  float: left;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bolder;
+}
+.topnav a1 {
+  float: left;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bolder;
+  
+}
+.topnav a:hover {
+  padding-bottom: 15px;
+  border-bottom-style: solid;
+  border-bottom-width: 3.1px;
+  width: fit-content;
+}
+.topnav a1:hover{
+    padding-bottom: 15px;
+    border-bottom-style: solid;
+    border-bottom-width: 3.1px;
+    width: fit-content;
+    background-color: #03d;
+    color: #ddd;
+}
+  .text {
+  position: absolute;
+  bottom: 300px;
+  width: 60%;
+  padding-left: 10%;
+  color: white;
+  font-family: HeroicCondensed,sans-serif!important;
+  animation: moveText 2s ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  font-size: 3.8125rem;
+    font-weight: 800;
+    line-height: 1.7;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+        .text1{
+            position: absolute;
+            bottom: 330px;
+            left: 75px;
+  font-weight: 600;
+            font-size: 80px;
+            color: white;
+            font-family: HeroicCondensed,sans-serif!important;
+            animation: moveText 2s ease-out;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+        .text2{
+            position:absolute;
+            bottom: 260px;
+            left: 75px;
+  font-weight: 600;
+            font-size: 80px;
+            font-family: HeroicCondensed,sans-serif!important;
+            color: white;
+            font-weight: bolder;
+            animation: moveText 2s ease-out;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+        div1{
+            position: absolute;
+            color: white;
+            bottom: 190px;
+            text-align: center;
+            left: 166px;
+            width: 220px;
+            padding: 10px;
+            border: 1px solid white;
+            margin: 0;
+            font-family: sans-serif;
+            font-weight: bolder;
+         }
+         .kicker--no-color-bar {
+    padding-left: 0;
+    font-size: 40px;
+}
+
+h2 {
+    color: #03d;
+}
+
+.h2, h2 {
+    font-size: 1.875rem;
+    font-style: normal;
+    letter-spacing: .0375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    
+}
+.h2, h2 {
+    font-family: FromtheStars,sans-serif;
+    font-size: 3.125rem;
+    letter-spacing: .025rem;
+    line-height: 3.4375rem;
+    margin-bottom: 20px;
+}
+.container3 {
+  position: absolute ;
+  float: left;
+  padding-left: 100px;
+  color: white;
+  font-family: "object-fit: cover;";
+    height: 100%;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+}
+section.full-width.white-bg p {
+    color: #2a2a2a;
+}
+p{
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: .04375rem;
+    line-height: 1.875rem;
+}
+.h5, h5, p {
+    font-style: normal;
+}
+p {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.text-center {
+    text-align: center!important;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--bs-gutter-x)*-.5);
+    margin-right: calc(var(--bs-gutter-x)*-.5);
+    margin-top: calc(var(--bs-gutter-y)*-1);
+}
+section.full-width.white-bg p {
+    color: #2a2a2a;
+}
+
+p {
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: .04375rem;
+    line-height: 1.875rem;
+}
+.h5, h5, p {
+    font-style: normal;
+}
+p {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.text-center {
+    text-align: center!important;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+div {
+    display: block;
+}
+.text-center {
+    text-align: center!important;
+}
+
+p {
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: .04375rem;
+    line-height: 1.875rem;
+}
+
+.h5, h5, p {
+    font-style: normal;
+}
+p {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+.p1{
+    text-align: end;
+    font-family: FromtheStars,sans-serif;
+    color: #03d;
+    font-size: 40px;
+    padding-right: 300px;
+    padding-top: 100px;
+    font-style: normal;
+    letter-spacing: .0375rem;
+    line-height: 2.375rem;
+
+}
+.p2{
+    text-align: center;
+    font-size: 40px;
+    width: 95%;
+     padding-left: 900px; 
+     font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: .04375rem;
+    line-height: 1.875rem;
+
+}
+hgroup {
+    text-align: center;
+
+}
+.justify-content-center {
+    justify-content: center!important;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--bs-gutter-x)*-.5);
+    margin-right: calc(var(--bs-gutter-x)*-.5);
+    margin-top: calc(var(--bs-gutter-y)*-1);
+}
+.col-md-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+}
+section.full-width.center-align {
+    text-align: center;
+}
+section.full-width.white-bg {
+    background: #fff;
+}
+
+section.full-width.padding-full {
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
+.two-col-wrapper .tc-image .tc-image-inner img {
+    font-family: "object-fit: cover;";
+    height: 100%;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+}
+img, svg {
+    vertical-align: middle;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.two-col-wrapper .col-12 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container4 {
+  position:absolute ;
+  float: right;
+  padding-left: 800px;
+  color: white;
+  font-family: "object-fit: cover;";
+    height: 100%;
+    padding-top:400px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+}
+.p3{
+    text-align: left;
+    font-family: FromtheStars,sans-serif;
+    color: #03d;
+    font-size: 40px;
+    padding-top: 500px;
+    padding-left: 300px;
+    font-style: normal;
+    letter-spacing: .0375rem;
+    line-height: 2.375rem;
+
+}
+.p4{
+    text-align: left;
+    font-size: 40px;
+    width: 50%;
+    padding-top:20px;
+    padding-left: 100px; 
+     font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: .04375rem;
+    line-height: 1.875rem;
+
+}
+
+.container00 {
+  position: absolute ;
+  float: left;
+  padding-top: 400px;
+  padding-left: 100px;
+  color: white;
+  font-family: "object-fit: cover;";
+    height: 100%;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+}
+.p5{
+    text-align: right;
+    font-family: FromtheStars,sans-serif;
+    color: #03d;
+    font-size: 40px;
+    padding-top: 700px;
+    padding-right: 300px;
+    font-style: normal;
+    letter-spacing: .0375rem;
+    line-height: 2.375rem;  
+
+}
+.p6{
+    font-size: 40px;
+    width: 100%;
+    padding-top:20px;
+    padding-left: 1000px; 
+     font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: .04375rem;
+    line-height: 1.875rem;
+}
+table {
+      margin: 0 auto;
+      padding-top: 00px;
+    }
+    td{
+        font-size: 30px;
+    }
+    th, td {
+      padding: 15px;
+    }
+    th {
+        text-align: left;
+    }
+    .social-bg-color {
+    background-color: #03d;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    text-decoration: none;
+}
+.container-fluid{
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    height: 75px;
+    width: 1520px;
+    padding-top: 10px;
+}
+.social-img{
+    height: 20px;
+    transition: -webkit-transform .2s cubic-bezier(.4,0,.2,1);
+    transition: transform .2s cubic-bezier(.4,0,.2,1);
+    transition: transform .2s cubic-bezier(.4,0,.2,1),-webkit-transform .2s cubic-bezier(.4,0,.2,1);
+    width: 20px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    
+    
+}
+.social-img:hover:before {
+  opacity: 1;
+}
+
+.social-img:hover {
+  transform: scale(1.2);
+}
+li{
+    list-style: none;
+    float: right;
+    padding-bottom: 500px;
+    padding-right: 200px;
+    align-items: center;
+}
+.footer-wrapper {
+    background-color: #222;
+    position:absolute;
+    width: 1520px;
+    height: 700px;
+}
+.footer-wrapper .logo-container .logo {
+    display: block;
+    margin-bottom: 60px;
+    max-width: 220px;
+    width: 100%;
+    padding-top: 100px;
+    
+}
+.text-decoration-none {
+    text-decoration: none!important;
+    float: left;
+    padding: 20px;
+    
+}
+.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+}
+.footer-wrapper .links-list-cont a, .footer-wrapper .links-list-cont button, .footer-wrapper .links-list-cont label {
+    color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .10938rem;
+    line-height: 1.1875rem;
+    position:absolute;
+    left: 500px;
+    bottom: 100px;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+            
+</style>
+<body>
+    <div class="bg-img">
+        <div class="container1">
+            <div class="topnav1">
+            <a href="Blue Origin.html">    <img src="./Blue Origin_files/blueorigin_logo_tagline.svg" height="60px" width="264px" style="float: left; background-color: transparent;"></a>
+            </div>
+            
+            
+        </div>
+        <div class="container">
+            <div class="topnav">
+                <a href="Engine.html">VEHICLES AND ENGINES</a>
+                <a href="ab.html">ABOUT BLUE</a>
+                <a href="Gallery.html">NEWS</a>
+                <a href="file:///C:/Users/LENOVIO/Pictures/New%20folder/MicroProject.html#">CARRER</a>
+                <a href="file:///C:/Users/LENOVIO/Pictures/New%20folder/MicroProject.html#">SHOP</a>
+                <button style="background-color: blue; height: 40px; width: 140px;"><a href="New folder/www.blueorigin.com/new-shepard/reserve-a-seat/index.html" style="color:white; font-weight:bolder ; font-size: 14px; padding: 10px;">FLY TO SPACE</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="text">ROCKET ENGINES DESIGNED FOR REUSE</div>
+        <div1><span >LEARN MORE</span></div1>
+        <hgroup>
+                
+
+            
+            <p class="kicker  kicker--no-color-bar " style="text-align: center; padding-top: 100px;">Blue Engines</p>
+        
+
+        <h2 class="h2">
+            Our Approach to Engines
+        </h2>
+
+        
+            </hgroup>
+            <section class="component full-width white-bg center-align padding-full scrolled">
+            
+            <div class="row  justify-content-center ">
+                <div class="col-12 col-md-8 text-center">
+            <div class="body-copy">
+                <p style="text-align: center;font-size: 25px;box-sizing:border-box ;">Operationally reusable rockets demand high performance engines capable of deep throttling for soft landings. Built for multiple uses, our family of engines is powering the next generation of rockets for commercial, civil, national security and human spaceflight.</p>
+                <p style="text-align: center;font-size: 25px; box-sizing: border-box;">Blue Engines are designed, developed and manufactured at our headquarters in Kent, Washington. We’re now preparing for serial production of our most powerful engine, the BE-4, in Huntsville, Alabama. All our engines and propulsion subsystems are thoroughly tested and qualified in Van Horn, Texas.</p>
+            </div>
+            </div>
+            </div>
+            </section>
+            <div class="container3">
+                <img src="https://d3ezn0y6hdgq62.cloudfront.net/assets/BlueOrigin_NewShepard_BoosterLandingAlternate3.jpg" style="width:696px;height: 494px;"></div>
+               <div>
+                <p class="p1" style="">BE-3</p> 
+               <p class="p2"> BE-3 is the first new liquid hydrogen-fueled rocket engine to be developed for production in America in over a decade.</p>
+ 
+            </div>
+            
+            <div class="container4">
+                <img src="https://d3ezn0y6hdgq62.cloudfront.net/assets/BlueOrigin_BE4_EngineLineup.jpg" style="width:696px;height: 494px;"></div>
+               <div>
+                <p class="p3">BE-4</p> 
+               <p class="p4"> The first ox-rich staged combustion engine made in the U.S. will power the next generation of American orbital rockets.</p>
+ 
+            </div>
+            <div class="container00">
+                <img src="https://d3ezn0y6hdgq62.cloudfront.net/assets/blueorigin_be7_web.jpg" style="width:696px;height: 1044px;"></div>
+               <div>
+                <p class="p5">BE-7</p> 
+               <p class="p6"> BE-7 is an additively manufactured, high-performance, dual-expander cycle engine, generating 44.5 kN (10,000 lbf) thrust.</p>
+ 
+            </div>
+            <table>
+                
+  <h1 style="text-align:center; padding-top: 700px;font-family: FromtheStars,sans-serif; color: #03d;letter-spacing: .0375rem;
+  line-height: 2.375rem;">History of Development</h1>
+  <table>
+                <thead>
+                    
+
+  <table>
+                  <tr>
+                    <th style="color: blue; font-size: 30px;font-weight: bolder;">Engine</th>
+                    <th style="color: blue; font-size: 30px;font-weight: bolder;">Propellant</th>
+                    <th style="color: blue; font-size: 30px;font-weight: bolder;">Thrust</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="color: blue; font-size: 30px;font-weight: bolder;">BE - 1</td>
+                    <td>Peroxide</td>
+                    <td>9 kN (2,000 lbf) at Sea Level</td>
+                  </tr>
+                  <tr>
+                    <td style="color: blue; font-size: 30px;font-weight: bolder;">BE - 2</td>
+                    <td>Kerosene + Peroxide</td>
+                    <td>140 kN (31,000 lbf) at Sea Level</td>
+                  </tr>
+                  <tr>
+                    <td style="color: blue; font-size: 30px;font-weight: bolder;">BE - 3PM</td>
+                    <td>Liquid Hydrogen + Liquid Oxygen</td>
+                    <td>490 kN (110,000 lbf) at Sea Level</td>
+                  </tr>
+                  <tr>
+                    <td style="color: blue; font-size: 30px;font-weight: bolder;">BE - 3U</td>
+                    <td>Liquid Hydrogen + Liquid Oxygen</td>
+                    <td>710 kN (160,000 lbf) in Vacuum</td>
+                  </tr>
+                  <tr>
+                    <td style="color: blue; font-size: 30px;font-weight: bolder;">BE - 4</td>
+                    <td>Liquefied Natural Gas + Liquid Oxygen</td>
+                    <td>2,400 kN (550,000 lbf) at Sea Level</td>
+                  </tr>
+                  <tr>
+                    <td style="color: blue; font-size: 30px;font-weight: bolder;">BE - 7</td>
+                    <td>Liquid Hydrogen + Liquid Oxygen</td>
+                    <td>44.5 kN (10,000 lbf) in Vacuum</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <section class="container-fluid social-bg-color">
+                <div class="row">
+                    <div class="col-12 d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <ul>
+                            <li>
+                                <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/blue-origin" class="lh-1">
+                                    <img src="./Blue Origin_files/linkedin.svg" class="social-img" alt="LinkedIn">
+                                </a>/ 
+                            </li>
+                            <li>
+                                <a target="_blank" rel="noopener" href="https://www.youtube.com/user/blueoriginchannel/" class="lh-1">
+                                    <img src="./Blue Origin_files/youtube.svg" class="social-img" alt="Youtube">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" rel="noopener" href="https://instagram.com/blueorigin/" class="lh-1">
+                                    <img src="./Blue Origin_files/instagram.svg" class="social-img" alt="Instagram">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" rel="noopener" href="https://twitter.com/blueorigin" class="lh-1">
+                                    <img src="./Blue Origin_files/twitter.svg" class="social-img" alt="Twitter">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="file:///C:/Users/LENOVIO/Pictures/New%20folder/MicroProject.html#" style="text-decoration: none; color: white;">FOLLOW BLUE ORIGIN</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </section>
+            <div class="footer-wrapper">
+                <div class="container-lg">
+                    <div class="row">
+                        <div class="col-12 col-lg-4 logo-container footer-line-adjust position-relative d-flex flex-column justify-content-center align-items-center" style="position: absolute; left:100px; bottom: 0px;">
+                            <div class="footer-box">
+                                
+                                    <a class="lh-sm logo" href="file:///C:/">
+                                        <img class="logo" src="./Blue Origin_files/featherfooter.svg" alt="Blue Origin Home">
+                                    </a>
+                                
+                                <div class="legal-links-responsive-hor d-flex flex-column d-none d-lg-flex">
+                                    <p class="copyright-size-hor text-start text-uppercase" style="position: absolute;left: 10px; color: white;"> © 2007 - 2023 Blue Origin, All Rights Reserved. </p>
+                                    <ul class="privacy_terms_cont-hor ps-0">
+                                        
+                                            <li>
+                                                <a class="text-decoration-none" href="file:///C:/privacy-policy" style="position: absolute; bottom: 400px; left: 0px; color: white;"> Privacy Policy</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a class="text-decoration-none" href="file:///C:/terms-of-use" style="position: absolute; bottom: 400px; left: 200px; color: white;"> Terms Of Use </a>
+                                            </li>
+                                        
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-12 col-lg-4 d-flex  flex-column justify-content-center align-items-center text-center text-lg-start">
+                                <div class="footer-box" style="position: absolute; bottom: 0px;">
+                                    <ul class="links-list-cont list-unstyled">
+                                        
+                                            <li>
+                                                <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="file:///C:/careers" style="position: absolute; bottom: 550px; left: 550px;">Careers</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="file:///C:/news/gallery" style="position: absolute; bottom: 500px; left: 550px;">Gallery</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="file:///C:/new-shepard/fly" style="position: absolute; bottom: 450px; left: 550px;">Become an Astronaut</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="file:///C:/become-a-supplier" style="position: absolute; bottom: 400px; left: 550px;">Become a Supplier</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="file:///C:/news/media-inquiries" style="position: absolute; bottom: 350px; left: 550px;">Media Inquiries</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="file:///C:/accessibility" style="position: absolute; bottom: 300px; left: 550px;">Accessibility</a>
+                                            </li>
+                                        
+                                        <li>
+                                             <div class="mb-4" style="position: absolute; bottom: 120px; width: max-content; left: 0px;">
+                                                <label class="form-label" for="accessibility-font" style="width: max-content;
+                                                left: 550px;
+                                                bottom: 130px;">
+                                                    Accessible Font Styles
+                                                </label>
+                                                <div class="links-list-cont__select-wrap" style="position: absolute; left: 570px; bottom: 90px;">
+                                                    <select id="accessibility-font" class="form-select links-list-cont_select-wrap_select" type="select" name="accessibility-font">
+                                                      <option class="links-list-cont_select-wrapselect_option" value="none">Default</option>
+                                                      <option class="links-list-cont_select-wrapselect_option" value="atkinson-hyperlegible">Atkinson Hyperlegible</option>
+                                                      <option class="links-list-cont_select-wrapselect_option" value="open-dyslexic">Open Dyslexic</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </li>
+                                            <li>
+                                            </li>
+                                            <li>
+                                                <a class="text-decoration-none text-white lh-sm footer__navigationLink position-relative" href="file:///C:/cookie-settings" style="position: absolute; bottom: 130px; left: 550px;">Cookie Settings</a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+        
+                            <div class="col-12 col-lg-4 d-flex flex-column grey-for-form">
+                                <div class="footer-box" style="position: absolute;left: 1000px; background-color: #2a2a2a; height: 685px; width: 500px; bottom: 15px;">
+                                    <h2 class="subscribe-header" style="position: absolute; bottom: 560px; left: 50px; color: white;">Subscribe</h2>
+                                    <p class="email-top-text mb-4 fw-normal lh-sm" style="position: absolute; bottom: 470px; left: 50px; font-size: 18px; width: 300px;color: white;"> Sign up to receive updates on Blue Origin's announcements, launches, and opportunities. </p>
+                                    <div class="d-flex" style="position: absolute; bottom: 160px; left: 50px;width: 300px;font-size: 17px;color: white;">
+                                        <form action="https://blueorigin.us9.list-manage.com/subscribe/post?u=ca4c14684ac1af3f1219b4382&amp;id=561fc27e50" method="post" name="mc-embedded-subscribe-form" target="_blank" class="align-items-center" x-data="{submitting:false}">
+                                        <div class="mb-4">
+                                            <p>* indicates a required field</p>
+                                        </div>
+                                            <div class="col-12">
+                                                <label class="fw-bold lh-sm" for="EMAIL">Email<abbr class="req" title="required"> *</abbr></label>
+                                                <div class="input-group mb-3">
+                                                    <input type="email" name="EMAIL" autocomplete="email" class="form-control subscribe-input-vars bg-transparent subscribe-border rounded-0 p-0 pb-2" id="EMAIL" required="">
+                                                </div>
+                                            </div>
+        
+                                            <label class="form-checkbox__label font-color-light-grey">
+                                                <input type="checkbox" class="form-checkbox" required="">
+                                                <div>
+                                                    <em>Please click to confirm your consent to receive email updates from us. Note - you have the right to withdraw your consent at any time by contacting us at <a href="mailto:privacy@blueorigin.com">privacy@blueorigin.com</a>
+                                                         or by clicking the “unsubscribe” link in the emails we send to you. Please review our <a href="https://www.blueorigin.com/privacy-policy">privacy policy</a> for more information on how we process your data.</em>
+                                                </div>
+                                            </label>
+        
+                                            <button type="submit" class="btn btn-minimal btn-animation empty-grey-grey mt-3">
+                                                <span>Submit</span>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+</body>
+</htmml> 
